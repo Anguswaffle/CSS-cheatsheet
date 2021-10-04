@@ -6,12 +6,12 @@
 
 * {
     background-color: rgb(71, 71, 71);
-    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     text-align: center;
-    font-family: sans-serif;    
+    font-family: sans-serif;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h2 {
     font-weight: 400;
 }
 
-h1, h2 {
+h1, h2, h3, p {
     color: var(--purplish);
 }
 
@@ -33,34 +33,36 @@ h1, h2 {
 
 #doc-header p {
     color: var(--offwhite);
-    size: 10px;
+    font-size: 15px;
     padding: 10px;
 }
 
 .cheatsheet {
+    margin: 10px 40px 10px 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px;
 }
 
 .card-header {
-    text-align: start;
     position: relative;
     margin-top: -20px;
-    border: 2px solid var(--offwhite);
-    border-radius: 5px;
+    border: 3px solid var(--offwhite);
+    padding: 5px;
     color: var(--purplish);
 }
 
-.cheatsheet p {
-    color: var(--offwhite);
+.code-card p {
     text-align: left;
-    size: 10px;
+    font-size: 15px;
+    margin: 15px;
 }
 
 .code-card {
-    flex: 1 0 200px;
+    width: 30%;
+    flex: 1 1 300px;
     padding: 10px;
     border: 1px dashed var(--offwhite);
 }
@@ -68,20 +70,33 @@ h1, h2 {
 pre {
     color: var(--offwhite);
     padding: 5px;
+    margin: 10px;
     background-image: linear-gradient(
         rgba(232, 102, 236, 0.3) 0%,
         rgba(232, 102, 236, 0.6) 100%
     );
 }
 
-
-.code-card .code-header {
-    border-radius: 8px;
-    transition: all 0.5s ease-in-out;
-}
-
 .code-card:hover, 
 .code-card:hover .card-header {
     box-shadow: inset 0px 0px 8px var(--pinkish),
                       0 0 15px var(--pinkish);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+    .code-card {
+      width: 45%;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .code-card {
+      width: 100%;
+    }
+
+    .cheatsheet {
+        flex-direction: column;
+    }
 }
