@@ -12,10 +12,10 @@
 <body>
     <header id="doc-header">
         <h1>
-        CSS Cheatsheet    
+            CSS Cheatsheet
         </h1>
         <p>
-        Have you ever had this problem? Put your favorite CSS codes here, dummy!
+            Have you ever had this problem? Put your favorite CSS codes here, dummy!
         </p>
     </header>
 
@@ -73,11 +73,11 @@
                     This will create a background linear gradient from top to bottom.
                 </p>
                 <pre>
-                    .linear-gradient-background {
-                        background-image: linear-gradient(
-                            rgba(232, 102, 236, 0.3) 0%,
-                            rgba(232, 102, 236, 0.6) 100%);
-                    }
+.linear-gradient-background {
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%);
+}
                 </pre>
             </section>
             <section class="code-card" id="transition">
@@ -87,8 +87,7 @@
                 <p>
                     Use box and transition shadows to glow on hover.
                 </p>
-                <pre>
-.code-card:hover, 
+                <pre>.code-card:hover, 
 .code-card:hover .card-header {
     box-shadow: inset 0px 0px 8px 
 rgba(232, 102, 236, 1), 0 0 15px 
@@ -103,7 +102,8 @@ rgba(232, 102, 236, 1);
                     <h3>Overlay Card with Title</h3>
                 </header>
                 <p>
-                    Use position properties and negative margins to raise elements higher than their natural starting point.
+                    Use position properties and negative margins to raise elements higher than their natural starting
+                    point.
                 </p>
                 <pre>
 .card-header {
@@ -120,17 +120,17 @@ rgba(232, 102, 236, 1);
                     Use to deliver a tailored style sheet to individual devices.
                 </p>
                 <pre>
-                    @media screen and (max-width: 992px) {
-                        body {
-                          background-color: blue;
-                        }
-                      }
+@media screen and (max-width: 992px) {
+    body {
+        background-color: blue;
+    }
+    }
                       
-                      @media screen and (max-width: 600px) {
-                        body {
-                          background-color: olive;
-                        }
-                      }
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+    }
+}
                 </pre>
             </section>
         </div>
@@ -142,4 +142,5 @@ rgba(232, 102, 236, 1);
         </h2>
     </footer>
 </body>
+
 </html>
